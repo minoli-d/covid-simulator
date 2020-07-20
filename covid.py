@@ -1,6 +1,14 @@
 import random
 import matplotlib.pyplot as plt
 
+exp_num = 30
+city = []
+g_rows = []
+infection_spread = []
+inf_house_list = set()
+num_column = 10
+num_row = 10
+
 
 class House:
     def __init__(self, housenum, x_coord, y_coord, num_people, residentlist, inf_count, inf_list, neighbours, neighlist, state):
@@ -31,14 +39,6 @@ class Person:
 
     def __str__(self):
         return 'Person(id = ' + str(self.id) + ', house = ' + str(self.inhouse) + ', state = ' + str(self.state) + ', transmission rate = ' + str(self.trans) + ', infection rate = ' + str(self.infect) + ')'
-
-exp_num = 30
-city = []
-g_rows = []
-infection_spread = []
-inf_house_list = set()
-num_column = 10
-num_row = 10
 
 
 def fillrow(start_num):
